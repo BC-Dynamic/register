@@ -4,12 +4,11 @@ import axios from "axios";
 
 const SignupPage: React.FC = () => {
     const [username, setUsername] = useState<string>("");
-    // const [first_name, setFirst_name] = useState<string>("");
     const [email, setEmail] = useState<string>("");
+    const [gender, setGender] = useState<string>("")
+    const [birth, setBirth] = useState<string>("");
     const [password, setPassword] = useState<string>("");
     const [confirmPassword, setConfirmPassword] = useState<string>("")
-    const [birth, setBirth] = useState<string>("");
-    const [gender, setGender] = useState<string>("")
 
     const navigate = useNavigate()
 
@@ -18,7 +17,6 @@ const SignupPage: React.FC = () => {
 
         axios.post("http://127.0.0.1:8000/register/", {
             username,
-            // first_name,
             email,
             gender,
             birth,
